@@ -1,1 +1,17 @@
-[{"hora": ["4"], "minutos": ["20"], "ampm": ["AM"], "fecha": ["20-10-2023"], "tipo": ["1"], "creacionEpoch": "1696288039718164"}]
+[
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "20-10-2023", "tipo": "1", "creacionEpoch": "1698371511685817"},
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "20-10-2023", "tipo": "1", "creacionEpoch": "1698372663015118"},
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "2020-10-21", "tipo": "2", "creacionEpoch": "1698373914486196"},
+    {"hora": "3", "minutos": "45", "ampm": "PM", "fecha": "21-10-2023", "tipo": "3", "creacionEpoch": "1698374902123456"},
+    {"hora": "6", "minutos": "15", "ampm": "AM", "fecha": "22-10-2023", "tipo": "1", "creacionEpoch": "1698375867012345"},
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "20-10-2023", "tipo": "1", "creacionEpoch": "1698371511685817"},
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "20-10-2023", "tipo": "1", "creacionEpoch": "1698372663015118"},
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "2020-10-21", "tipo": "2", "creacionEpoch": "1698373914486196"},
+    {"hora": "3", "minutos": "45", "ampm": "PM", "fecha": "21-10-2023", "tipo": "3", "creacionEpoch": "1698374902123456"},
+    {"hora": "6", "minutos": "15", "ampm": "AM", "fecha": "22-10-2023", "tipo": "1", "creacionEpoch": "1698375867012345"},
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "20-10-2023", "tipo": "1", "creacionEpoch": "1698371511685817"},
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "20-10-2023", "tipo": "1", "creacionEpoch": "1698372663015118"},
+    {"hora": "4", "minutos": "20", "ampm": "AM", "fecha": "2020-10-21", "tipo": "2", "creacionEpoch": "1698373914486196"},
+    {"hora": "3", "minutos": "45", "ampm": "PM", "fecha": "21-10-2023", "tipo": "3", "creacionEpoch": "1698374902123456"},
+    {"hora": "6", "minutos": "15", "ampm": "AM", "fecha": "22-10-2023", "tipo": "1", "creacionEpoch": "1698375867012345"}
+]
