@@ -12,7 +12,12 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route("/Alarmas/listar")
+def listar_todas():
+    with open("alarmas.json", "r") as f:
+        datos = json.load(f)
 
+        return jsonify(datos)
 
 @app.route("/Alarmas/listen/<epoch>")
 def get_alarma(epoch):
@@ -31,61 +36,29 @@ def get_alarma(epoch):
 
     return jsonify(Respuesta), 200
 
+
 @app.route("/Alarmas/agregar/")
 def set_alarma():
     query = request.args.to_dict(flat=False)
-    #Ejemplo = /Alarmas/agregar/?fecha=20-2-2002&hora=12:00&tipo=1
-    #{
-        #"hora": 12,
-        #"minutos": 0,
-        #"ampm": "PM",
-        #"fecha": "02/10/2023",
-        #"tipo": 2,
-        #"creacionEpoch": 100000
-    #}
-    hora = None
-    minutos = None
-    ampm = None
-    fecha= None
-    tipo= None
-    creacionEpoch = None
 
-    #Metodo para crear Json
-    if 'hora' in query:
-        hora = query['hora']
-    else:
-        hora = None
+    # Extraer los primeros elementos de las listas o asignar None si no existen
+    hora = query.get('hora', [None])[0]
+    minutos = query.get('minutos', [None])[0]
+    ampm = query.get('ampm', [None])[0]
+    fecha = query.get('fecha', [None])[0]
+    tipo = query.get('tipo', [None])[0]
 
-    if 'minutos' in query:
-        minutos = query['minutos']
+    if None in (hora, minutos, ampm, fecha, tipo):
+        print('No hay algún valor')
+        return "Error"
     else:
-        minutos = None
-
-    if 'ampm' in query:
-        ampm = query['ampm']
-    else:
-        ampm = None
-
-    if 'fecha' in query:
-        fecha = query['fecha']
-    else:
-        fecha = None
-
-    if 'tipo' in query:
-        tipo = query['tipo']
-    else:
-        tipo = None
-
-    if((hora or minutos or ampm or fecha or tipo) == None):
-        print('No hay algun valor')
-    else:
-        valores ={
+        valores = {
             "hora": hora,
             "minutos": minutos,
             "ampm": ampm,
             "fecha": fecha,
             "tipo": tipo,
-            "creacionEpoch": str(math.floor( time.time() *1000000))
+            "creacionEpoch": str(math.floor(time.time() * 1000000))
         }
 
         archivo_json = "alarmas.json"
